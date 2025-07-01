@@ -1,5 +1,5 @@
 import Alimento.*
-import Objetos.*
+import objetos.*
 
 object juego{
   method iniciar(){

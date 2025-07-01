@@ -1,22 +1,37 @@
+import example.*
 import wollok.game.*
-
 import MainGame.*
 import PantallaCarga.*
 import mainMenu.*
 
 
-program PepitaGame {
+program BurgerRush {
 	const musica = game.sound("musica.mp3")
 	
-	game.title("Pepita")
+	game.title("Burger Rush!")
 	game.height(30)
 	game.width(45)
 	menuPrincipal.mainMenu()
 	musica.shouldLoop(true)
 	keyboard.s().onPressDo({musica.volume(1)})
-  	keyboard.b().onPressDo({musica.volume(0)})
+  	keyboard.n().onPressDo({musica.volume(0)})
   	keyboard.m().onPressDo({musica.volume(0.5)})
 	game.schedule(1, {musica.play()})
+	keyboard.enter().onPressDo({
+		if(puntero2.position().y() == 6){
+			game.clear()
+			juego.iniciar()
+		} else if(puntero2.position().y() == 3){
+			
+		} else if(puntero2.position().y() == 0){
+			game.clear()
+			pantallaSomos.iniciar()
+		}
+	})
+	keyboard.del().onPressDo({
+		game.clear()
+		menuPrincipal.mainMenu()
+		})
 	// add assets in asset folder, for example, for the background
   // game.boardGround("fondo2.jpg")
 
@@ -24,4 +39,7 @@ program PepitaGame {
 	//juego.iniciar()
 	// pantallaCarga.iniciarPantallaCarga()
 	game.start()
+
+	
 }
+

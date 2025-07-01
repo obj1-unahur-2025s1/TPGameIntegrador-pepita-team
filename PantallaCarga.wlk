@@ -1,3 +1,4 @@
+import mainMenu.*
 
 import MainGame.*
 
