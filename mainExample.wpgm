@@ -1,18 +1,27 @@
 import wollok.game.*
 
-import example.pepita
+import MainGame.*
+import PantallaCarga.*
+import mainMenu.*
+
 
 program PepitaGame {
+	const musica = game.sound("musica.mp3")
+	
 	game.title("Pepita")
-	game.height(10)
-	game.width(10)
-
+	game.height(30)
+	game.width(45)
+	menuPrincipal.mainMenu()
+	musica.shouldLoop(true)
+	keyboard.s().onPressDo({musica.volume(1)})
+  	keyboard.b().onPressDo({musica.volume(0)})
+  	keyboard.m().onPressDo({musica.volume(0.5)})
+	game.schedule(1, {musica.play()})
 	// add assets in asset folder, for example, for the background
   // game.boardGround("fondo2.jpg")
 
 	//
-
-	game.showAttributes(pepita) //Debug
-
+	//juego.iniciar()
+	// pantallaCarga.iniciarPantallaCarga()
 	game.start()
 }
