@@ -1,0 +1,23 @@
+
+import wollok.game.*
+import MainGame.*
+import mainMenu.*
+
+
+program BurgerRush {
+	
+	
+	game.title("Burger Rush!")
+	game.height(10)
+	game.width(11)
+	game.cellSize(150)
+	menuPrincipal.mainMenu()
+	keyboard.m().onPressDo({
+		game.clear()
+		menuPrincipal.mainMenu()
+		})
+	game.start()
+
+	
+}
+
