@@ -168,6 +168,7 @@ object indicador {
     if (position.x() < 9) {
       position = position.right(3)
       console.println(self.position())
+      pantallaSomos.hablar()
     }
   }
   
@@ -175,6 +176,7 @@ object indicador {
     if (position.x() > 1) {
       position = position.left(3)
       console.println(self.position())
+      pantallaSomos.hablar()
     }
   }
 }
