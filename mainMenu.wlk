@@ -4,7 +4,6 @@ import objetos.*
 object menuPrincipal {
   const musica = game.sound("musica.mp3")
   var fondo = "FondoConFueguito.png"
-  const sonido = game.sound("sound1.mp3")
   
   method mainMenu() {
     game.clear()
@@ -28,6 +27,7 @@ object menuPrincipal {
     musica.play()
     })
   }
+
   
   method logicEnter() {
     if (puntero2.position().y() == 3) {
@@ -45,11 +45,11 @@ object menuPrincipal {
       }
     }
   }
-  
-  method controlesVolumen() {
-    keyboard.j().onPressDo({ musica.volume(1) })
-    keyboard.l().onPressDo({ musica.volume(0) })
-    keyboard.l().onPressDo({ musica.volume(0.5) })
+}
+
+object sonido {
+  method play(){
+    game.sound("sound1.mp3").play()
   }
 }
 

@@ -14,5 +14,9 @@ program BurgerRush {
 		game.clear()
 		menuPrincipal.mainMenu()
 		})
+	keyboard.up().onPressDo({sonido.play()})
+	keyboard.down().onPressDo({sonido.play()})
+	keyboard.left().onPressDo({sonido.play()})
+	keyboard.right().onPressDo({sonido.play()})
 	game.start()
 }
