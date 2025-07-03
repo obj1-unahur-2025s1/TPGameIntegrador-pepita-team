@@ -1,4 +1,4 @@
-# Burguer Rush
+# Burger Rush
 
 ## Equipo de desarrollo
 
@@ -21,7 +21,7 @@
 - Tu tarea es armar el pedido exactamente como se muestra, seleccionando, combinando y cocinando los ingredientes correctos.
 - Si lo preparás correctamente, sumás puntos.
 - Si te equivocás se te restan puntos.
-- El objetivo final es alcanzar el puntaje ganador antes de que se termine el tiempo total del juego.
+- El objetivo final es alcanzar el puntaje ganador (60) antes de que se termine el tiempo total del juego.
 
 ## Controles
 
