@@ -5,8 +5,6 @@ import mainMenu.*
 
 
 program BurgerRush {
-	
-	
 	game.title("Burger Rush!")
 	game.height(10)
 	game.width(11)
@@ -17,7 +15,4 @@ program BurgerRush {
 		menuPrincipal.mainMenu()
 		})
 	game.start()
-
-	
 }
-

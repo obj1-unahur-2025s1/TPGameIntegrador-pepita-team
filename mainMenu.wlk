@@ -19,6 +19,9 @@ object menuPrincipal {
     game.addVisual(instrucciones)
     game.addVisual(nosotros)
     game.addVisual(puntero2)
+    keyboard.b().onPressDo({ musica.volume(1) })
+    keyboard.m().onPressDo({ musica.volume(0) })
+    keyboard.n().onPressDo({ musica.volume(0.5) })
     keyboard.w().onPressDo({ puntero2.subir()
     musica.play() })
     keyboard.s().onPressDo({ puntero2.bajar() 
@@ -44,9 +47,9 @@ object menuPrincipal {
   }
   
   method controlesVolumen() {
-    keyboard.s().onPressDo({ musica.volume(1) })
-    keyboard.n().onPressDo({ musica.volume(0) })
-    keyboard.z().onPressDo({ musica.volume(0.5) })
+    keyboard.j().onPressDo({ musica.volume(1) })
+    keyboard.l().onPressDo({ musica.volume(0) })
+    keyboard.l().onPressDo({ musica.volume(0.5) })
   }
 }
 

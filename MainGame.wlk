@@ -23,7 +23,6 @@ object juego{
         })
     self.elementosTeclado()
     game.onTick(1000, "VerificarWin", {self.finDelJuego()})
-
   }
     
 
