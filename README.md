@@ -34,7 +34,7 @@
 - B: Volumen al 100%.
 - N: Volumen al 50%.
 
-## Otros
+## Información adicional
 
 - Universidad Nacional de Hurlingham.
 - Versión de wollok: 0.3.1
