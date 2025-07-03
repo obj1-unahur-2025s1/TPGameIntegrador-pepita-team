@@ -9,9 +9,9 @@
 
 ## Capturas
 
-![menu](assets\captura1.jpg)
-![interface](assets\captura2.jpg)
-![interface con media hamburguesa](assets\captura3.jpg)
+<img src="assets/captura1.jpg" width=900 />
+<img src="assets/captura2.jpg" width=900 />
+<img src="assets/captura3.jpg" width=900 />
 
 
 ## Reglas de Juego
