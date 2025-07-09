@@ -318,25 +318,32 @@ object loseMssg{
 object temporizador{
   var property position = game.at(0,9)
   var property segundos = 60
-  var property image = "Cronometroo.gif"
+  var property image = "RelojVerde.png"
 
   method iniciar(){
     game.onTick(1000, "Cronometro", {
       segundos = (segundos - 1).max(0)
       })
+    game.schedule(25000, {image = "RelojAmarillo.png"})
+    game.schedule(45000, {image = "RelojRojo.png"})
   }
 
   method reiniciar(){
     segundos = 60
+    image = "RelojVerde.png"
   }
 
-  method reiniciarGif(){
-    image = "circle.png"
-    game.schedule(10, {
-    image = "Cronometroo.gif"
-    })
-  }
+}
 
+
+object pulgarArriba{
+  method position() = game.at(puntero.position().x() + 1,puntero.position().y() + 1)
+  method image() = "PulgarArribaF.png"
+}
+
+object pulgarAbajo{
+  method position() = game.at(puntero.position().x() + 1,puntero.position().y() + 1)
+  method image() = "PulgarAbajoF.png"
 }
 
 //****************************************************************************************************

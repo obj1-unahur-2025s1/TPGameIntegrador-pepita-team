@@ -124,14 +124,18 @@ object puntero{
     if(pedidoArmado.compararPedido())
     {
       puntaje.setPuntosWin()
-      game.say(self,"Pedido exitoso")
+      //game.say(self,"Pedido exitoso")
+      game.addVisual(pulgarArriba)
+      game.schedule(1500, {game.removeVisual(pulgarArriba)})
       pedidoArmado.clean()
       orden.newOrden()
     } 
     else
     {
       puntaje.setPuntosLose()
-      game.say(self,"Pedido erroneo")
+      //game.say(self,"Pedido erroneo")
+      game.addVisual(pulgarAbajo)
+      game.schedule(1500, {game.removeVisual(pulgarAbajo)})
     }
 }
 

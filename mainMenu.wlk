@@ -158,7 +158,6 @@ object pantallaSomos {
     game.clear()
     game.addVisual(equipo)
     game.addVisual(indicador)
-    game.addVisual(infoAbout)
     keyboard.d().onPressDo({ indicador.moverDerecha() })
     keyboard.a().onPressDo({ indicador.moverIzquierda() })
     keyboard.m().onPressDo({ menuPrincipal.mainMenu() })
@@ -167,22 +166,38 @@ object pantallaSomos {
   method hablar() {
     if (indicador.position() == (game.at(0,2))){
       keyboard.enter().onPressDo(
-        { game.say(indicador, "Soy Nahuel y soy Chef Profesional") }
+        { mensajeHablar.image("Nahuel.png")
+          mensajeHablar.position(game.at(2,6))
+          game.addVisual(mensajeHablar)
+          game.schedule(2000, {game.removeVisual(mensajeHablar)})
+        }
       )
     }
     if (indicador.position() == (game.at(3,2))){
       keyboard.enter().onPressDo(
-        { game.say(indicador, "Soy Ariel y soy Chef Profesional") }
+        {mensajeHablar.image("Ariel.png")
+         mensajeHablar.position(game.at(4,6))
+         game.addVisual(mensajeHablar)
+         game.schedule(2000, {game.removeVisual(mensajeHablar)})
+         }
       )
     }
     if (indicador.position() == (game.at(6,2))){
       keyboard.enter().onPressDo(
-        { game.say(indicador, "Soy Laura y soy Chef Profesional") }
+        { mensajeHablar.image("Laura.png")
+          mensajeHablar.position(game.at(7,6))
+          game.addVisual(mensajeHablar)
+          game.schedule(2000, {game.removeVisual(mensajeHablar)})
+        }
       )
     }
     if (indicador.position() == (game.at(9,2))){
       keyboard.enter().onPressDo(
-        { game.say(indicador, "Soy Cristian y soy Chef Profesional") }
+        { mensajeHablar.image("Cristian.png")
+          mensajeHablar.position(game.at(7,7))
+          game.addVisual(mensajeHablar)
+          game.schedule(2000, {game.removeVisual(mensajeHablar)})
+        }
       )
     }
   }
@@ -215,12 +230,14 @@ object indicador {
     }
   }
 }
+  object mensajeHablar{
+    var property image = ""
+    var property position = game.at(0,0)
+    
+  }
 
-object infoAbout {
-  method image() = "SpaceHablar.png"
-  
-  method position() = game.at(10, 25)
-} /////////////////////////////////////////////// Instrucciones
+
+ /////////////////////////////////////////////// Instrucciones
 
 object pantallaInstrucciones {
   method iniciar() {
