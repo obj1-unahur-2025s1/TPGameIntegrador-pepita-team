@@ -4,6 +4,10 @@ import objetos.*
 
 
 object juego{
+  const sonidoBoton = new Sonido(sonido = "salto.mp3")
+  const boton = new Sonido(sonido = "sound1.mp3")
+ 
+
   method iniciar(){
     puntaje.seleccionadorDePuntaje()
     console.println(puntaje.puntos())
@@ -11,6 +15,10 @@ object juego{
     temporizador.reiniciar()
     temporizador.iniciar()
     game.addVisualCharacter(puntero)
+    keyboard.up().onPressDo({boton.reproducir()})
+	  keyboard.down().onPressDo({boton.reproducir()})
+	  keyboard.left().onPressDo({boton.reproducir()})
+	  keyboard.right().onPressDo({boton.reproducir()})    
     
     orden.newOrden()
     console.println(orden.orden())
@@ -96,13 +104,13 @@ object juego{
     }
 
     method elementosTeclado(){
-      keyboard.k().onPressDo({pedidoArmado.eliminarUltimoIngrediente()})
-      keyboard.t().onPressDo({self.hacerClon()})                                 //Llama al metodo hacerClon para que cuando toco la T verifique que esta colisionanso con eso mismo y lo clona
-      keyboard.x().onPressDo({console.println(pedidoArmado.ingredientes())})  //Verificaicon por consola de la lista de productos que se va armando
-      keyboard.enter().onPressDo({puntero.ganar()})                           //Llama a verificar si esta bien loq ue armamos
-      keyboard.c().onPressDo({self.cocinar()})
-      keyboard.backspace().onPressDo({puntaje.setPuntosWin()})
-      keyboard.m().onPressDo({ menuPrincipal.mainMenu() })
+      keyboard.k().onPressDo({pedidoArmado.eliminarUltimoIngrediente() sonidoBoton.reproducir()})
+      keyboard.t().onPressDo({self.hacerClon() sonidoBoton.reproducir()})                                 //Llama al metodo hacerClon para que cuando toco la T verifique que esta colisionanso con eso mismo y lo clona
+      keyboard.x().onPressDo({console.println(pedidoArmado.ingredientes()) sonidoBoton.reproducir()})  //Verificaicon por consola de la lista de productos que se va armando
+      keyboard.enter().onPressDo({puntero.ganar() sonidoBoton.reproducir()})                           //Llama a verificar si esta bien loq ue armamos
+      keyboard.c().onPressDo({self.cocinar() sonidoBoton.reproducir()})
+      keyboard.backspace().onPressDo({puntaje.setPuntosWin() sonidoBoton.reproducir()})
+      keyboard.m().onPressDo({ menuPrincipal.mainMenu() sonidoBoton.reproducir()})
     }
 
 }

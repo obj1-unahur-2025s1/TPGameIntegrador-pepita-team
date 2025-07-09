@@ -3,11 +3,13 @@ import objetos.*
 
 object menuPrincipal {
   const musica = game.sound("musica.mp3")
+
   var fondo = "FondoConFueguito.png"
   
   method mainMenu() {
-    game.clear()
+    
     musica.shouldLoop(true)
+    game.clear()
     game.boardGround(fondo)
     jugar.initialize()
     instrucciones.initialize()
@@ -27,6 +29,10 @@ object menuPrincipal {
     musica.play()
     })
   }
+  method reproducirMusica(){
+		musica.reproducir()
+	  game.onTick(148000, "musica1", {musica.reproducir()})
+	}	
 
   
   method logicEnter() {
@@ -47,10 +53,15 @@ object menuPrincipal {
   }
 }
 
-object sonido {
-  method play(){
-    game.sound("sound1.mp3").play()
-  }
+class Sonido{
+	const property sonido 
+	
+	method reproducir(){
+		game.sound(sonido).play()
+	}
+	method parar(){
+		game.sound(sonido).stop()
+	}
 }
 
 object nombreJuego {
