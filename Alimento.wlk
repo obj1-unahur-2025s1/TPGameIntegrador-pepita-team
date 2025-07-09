@@ -49,7 +49,7 @@ class Carne inherits Alimento{
     calorias += 100
     position = game.at(posicion.posicionParrillaX(),posicion.posicionParrillaY())
     posicion.usarParrilla()
-    game.schedule(5000, {
+    game.schedule(2000, {
         image = "CarneCocidaF.png"
         position = posActual
         posicion.dejarDeUsarParrilla()
@@ -118,7 +118,6 @@ class Ketchup inherits Alimento(){
   method ingrediente()="Ketchup"
 }
 
-
 class Cheddar inherits Alimento(){
   method initialize(){
     calorias = 200
@@ -132,7 +131,7 @@ class Cheddar inherits Alimento(){
     calorias += 100
     position = game.at(posicion.posicionParrillaX(),posicion.posicionParrillaY())
     posicion.usarParrilla()
-    game.schedule(5000, {
+    game.schedule(2000, {
         image = "QuesitoF.png"
         position = posActual
         posicion.dejarDeUsarParrilla()
@@ -152,7 +151,6 @@ class Cheddar inherits Alimento(){
   })}
 
   method ingrediente() = "Cheddar"
-
 } 
 
 class Bacon inherits Alimento(){
@@ -168,7 +166,7 @@ class Bacon inherits Alimento(){
     calorias += 100
     position = game.at(posicion.posicionParrillaX(),posicion.posicionParrillaY())
     posicion.usarParrilla()
-    game.schedule(5000, {
+    game.schedule(2000, {
         image = "BaconF.png"
         position = posActual
         posicion.dejarDeUsarParrilla()
@@ -203,7 +201,7 @@ class Patylenteja inherits Alimento{
   calorias += 100
   position = game.at(posicion.posicionParrillaX(),posicion.posicionParrillaY())
   posicion.usarParrilla()
-  game.schedule(5000, {
+  game.schedule(2000, {
       image = "Hamburguesa_de_lentejasF.png"
       position = posActual
       posicion.dejarDeUsarParrilla()

@@ -2,12 +2,10 @@ import mainMenu.*
 import Alimento.*
 import objetos.*
 
-
 object juego{
   const sonidoBoton = new Sonido(sonido = "salto.mp3")
   const boton = new Sonido(sonido = "sound1.mp3")
  
-
   method iniciar(){
     puntaje.seleccionadorDePuntaje()
     console.println(puntaje.puntos())
@@ -49,7 +47,6 @@ object juego{
          if((!objetivo.estaCrudo()) && objetivo !== null && objetivo.estaColisionando() && !objetivo.estaEnLaParrilla()){
            objetivo.quemar()
          }
-        
     }
 
 
@@ -130,16 +127,12 @@ object puntero{
       game.say(self,"Pedido exitoso")
       pedidoArmado.clean()
       orden.newOrden()
-
-
     } 
     else
     {
       puntaje.setPuntosLose()
       game.say(self,"Pedido erroneo")
     }
-
-
 }
 
 

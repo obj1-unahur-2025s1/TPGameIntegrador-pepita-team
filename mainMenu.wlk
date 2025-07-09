@@ -14,11 +14,14 @@ object menuPrincipal {
     jugar.initialize()
     instrucciones.initialize()
     nosotros.initialize()
+    enter.initialize()
     keyboard.enter().onPressDo({ self.logicEnter() })
     game.addVisual(nombreJuego)
     game.addVisual(jugar)
     game.addVisual(instrucciones)
     game.addVisual(nosotros)
+    game.addVisual(enter)
+    game.addVisual(movimiento)
     game.addVisual(puntero2)
     keyboard.b().onPressDo({ musica.volume(1) })
     keyboard.m().onPressDo({ musica.volume(0) })
@@ -32,9 +35,8 @@ object menuPrincipal {
   method reproducirMusica(){
 		musica.reproducir()
 	  game.onTick(148000, "musica1", {musica.reproducir()})
-	}	
+	}
 
-  
   method logicEnter() {
     if (puntero2.position().y() == 3) {
       game.clear()
@@ -118,6 +120,28 @@ object nosotros inherits Opcion {
   method initialize() {
     imagen = "o3.png"
     position = game.at(3,1)
+  }
+  
+  method position() = position
+  
+  method image() = imagen
+}
+
+object enter inherits Opcion {
+  method initialize() {
+    position = game.at(2,0)
+    imagen = "botonEnter.png"
+  }
+  
+  method position() = position
+  
+  method image() = imagen
+}
+
+object movimiento inherits Opcion {
+  method initialize() {
+    position = game.at(0,0)
+    imagen = "movimiento.png"
   }
   
   method position() = position

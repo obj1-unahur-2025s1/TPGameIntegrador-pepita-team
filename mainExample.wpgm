@@ -1,4 +1,4 @@
-
+import objetos.*
 import wollok.game.*
 import MainGame.*
 import mainMenu.*
@@ -13,6 +13,6 @@ program BurgerRush {
 	keyboard.m().onPressDo({
 		game.clear()
 		menuPrincipal.mainMenu()
-		})
-  game.start()
+		})	
+  	game.start()
 }

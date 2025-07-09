@@ -334,7 +334,7 @@ object temporizador{
     image = "circle.png"
     game.schedule(10, {
     image = "Cronometroo.gif"
-  })
+    })
   }
 
 }
