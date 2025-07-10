@@ -158,6 +158,7 @@ object pantallaSomos {
     game.clear()
     game.addVisual(equipo)
     game.addVisual(indicador)
+    game.addVisual(adMoverse)
     keyboard.d().onPressDo({ indicador.moverDerecha() })
     keyboard.a().onPressDo({ indicador.moverIzquierda() })
     keyboard.m().onPressDo({ menuPrincipal.mainMenu() })
@@ -207,6 +208,12 @@ object equipo {
   var property position = game.at(0, 0)
   
   method image() = "prueba.png"
+}
+
+object adMoverse{
+  var property position = game.at(0,0)
+  
+  method image() = "controlsF.png"
 }
 
 object indicador {
