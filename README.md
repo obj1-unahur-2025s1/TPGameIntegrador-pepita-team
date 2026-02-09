@@ -14,6 +14,24 @@
 <img src="assets/captura3.jpg" width=900 />
 
 
+
+## 🚀 Instalación y Ejecución
+-Para poder probar este juego, seguí estos pasos:
+
+-Instalar Wollok: Descargá e instalá el entorno de desarrollo oficial desde [la página oficial de Wollok](https://www.wollok.org/documentation/wollok_game/).
+
+-Clonar el repositorio: 
+
+```bash git clone https://github.com/Ariel3748/Wollok-Game.git```
+
+
+-Ejecutar el juego:
+
+-Abrí el archivo principal del juego (normalmente el que tiene la extensión .wpgm).
+
+-Presiona por encima del metodo principal BurguerRush() "Run Program"
+
+
 ## Reglas de Juego
 
 - Al comenzar la partida, aparecerá en pantalla un pedido aleatorio que deberás preparar.
